@@ -21,8 +21,8 @@ import org.springframework.web.client.RestTemplate;
 //@EnableHystrix
 public class SampleServiceApplication {
 
-	@Autowired
-	private DiscoveryClient discoveryClient;
+	//@Autowired
+	//private DiscoveryClient discoveryClient;
 
 
 	public static void main(String[] args) {
