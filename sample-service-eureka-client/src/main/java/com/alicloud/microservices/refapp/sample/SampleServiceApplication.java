@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-@EnableDiscoveryClient
-@RestController
+//@EnableDiscoveryClient
+//@RestController
 @EnableHystrix
 public class SampleServiceApplication {
 
@@ -33,6 +33,7 @@ public class SampleServiceApplication {
 	@RequestMapping("/")
 	public String home(@RequestParam(value = "service", required = false) String serviceName)
 			throws MalformedURLException {
+		/*
 		List<ServiceInstance> list = discoveryClient.getInstances(serviceName);
 		if (list != null && list.size() > 0) {
 			String serviceURL = list.get(0).getUri().toURL().toString();
@@ -40,7 +41,7 @@ public class SampleServiceApplication {
 	        RestTemplate restTemplate = new RestTemplate();
 			return restTemplate.getForObject(serviceURL, String.class);
 
-		}
+		}*/
 		return "Hello! This is from Sample Service 1!";
 	}
 
