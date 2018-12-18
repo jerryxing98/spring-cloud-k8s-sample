@@ -5,15 +5,14 @@ server:
 #  hystrix:
 #    enabled: true
      
-#eureka:
-#  client:
-#    enabled: false
-#    serviceUrl:
-#      defaultZone: ${EUREKA_SERVER_ADDRESS:http://localhost:8761/eureka/}
-#  instance:
-#    #hostname: ${HOSTNAME:localhost}
-#    preferIpAddress: true
-
+eureka:
+  client:
+    enabled: true
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER_ADDRESS:http://localhost:8761/eureka/}
+  instance:
+    #hostname: ${HOSTNAME:localhost}
+    preferIpAddress: true
 #cloud:
 #  conablefig:
 #    failFast: true
